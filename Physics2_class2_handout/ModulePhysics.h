@@ -32,6 +32,9 @@ public:
 	bool CleanUp();
 
 	// TODO 3: Move body creation to 3 functions to create circles, rectangles and chains
+	void CreateCircle(int x, int y, int radius);
+	void CreateRectangles(int x, int y, int width, int height);
+	void CreateChains(int x, int y, int vertex[], int values);
 
 private:
 

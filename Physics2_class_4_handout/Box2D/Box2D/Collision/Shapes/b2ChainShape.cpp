@@ -72,7 +72,7 @@ void b2ChainShape::CreateChain(const b2Vec2* vertices, int32 count)
 	m_hasPrevVertex = false;
 	m_hasNextVertex = false;
 
-	m_prevVertex.SetZero();
+	//m_prevVertex.SetZero();
 	m_nextVertex.SetZero();
 }
 

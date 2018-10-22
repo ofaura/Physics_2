@@ -151,7 +151,7 @@ PhysBody* ModulePhysics::CreateRectangleSensor(int x, int y, int width, int heig
 	return pbody;
 }
 
-PhysBody* ModulePhysics::CreateChain(int x, int y, int* points, int size)
+PhysBody* ModulePhysics::CreateChain(int x, int y, int* points, int size, bool loop)
 {
 	b2BodyDef body;
 	body.type = b2_dynamicBody;
@@ -166,9 +166,13 @@ PhysBody* ModulePhysics::CreateChain(int x, int y, int* points, int size)
 	{
 		p[i].x = PIXEL_TO_METERS(points[i * 2 + 0]);
 		p[i].y = PIXEL_TO_METERS(points[i * 2 + 1]);
+		LOG("x: %i, y:%i,", points[i * 2 + 0], points[i * 2 + 1]);
 	}
 
-	shape.CreateLoop(p, size / 2);
+	/*if (loop)
+		shape.CreateLoop(p, size / 2);
+	else*/
+		shape.CreateChain(p, size / 2);
 
 	b2FixtureDef fixture;
 	fixture.shape = &shape;

@@ -173,6 +173,7 @@ PhysBody* ModulePhysics::CreateChain(int x, int y, int* points, int size, bool l
 		shape.CreateLoop(p, size / 2);
 	else*/
 		shape.CreateChain(p, size / 2);
+		
 
 	b2FixtureDef fixture;
 	fixture.shape = &shape;

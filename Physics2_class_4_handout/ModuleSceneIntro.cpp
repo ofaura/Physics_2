@@ -91,7 +91,7 @@ update_status ModuleSceneIntro::Update()
 			30, 62
 		};
 
-		ricks.add(App->physics->CreateChain(App->input->GetMouseX(), App->input->GetMouseY(), perimeter, 66, false));
+		ricks.add(App->physics->CreateChain(App->input->GetMouseX(), App->input->GetMouseY(), water_slide, 40, false));
 	}
 
 	// Prepare for raycast ------------------------------------------------------
